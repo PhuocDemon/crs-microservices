@@ -1,3 +1,6 @@
+// path: course-service/src/main/java/vn/edu/crs/course_service/controller/InternalCourseController.java
+// purpose: controller rieng cho cac API noi bo, chi danh cho registration-service goi sang
+
 package vn.edu.crs.course_service.controller;
 
 import vn.edu.crs.course_service.dto.CourseDTO;
@@ -8,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/internal/courses")
 @RequiredArgsConstructor
-public class InternalCourseController<CourseDTO> {
+public class InternalCourseController {
+
     private final CourseService courseService;
 
     @PatchMapping("/{id}/reserve-seat")
